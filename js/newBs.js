@@ -1,4 +1,4 @@
-var inSection=true;
+var inSection = true;
 var curEve;
 //document.getElementsByTagName("body").setActive();
 console.log(document.activeElement);
@@ -6,127 +6,107 @@ console.log(document.activeElement);
 //document.getElementById("sec").className="bespoke-active bespoke-slide"
 var mySwipeIt = new SwipeIt('.box');
 var list = document.getElementsByTagName("section");
-list[3].className="bespoke-active bespoke-slide";
-var cur=3;
-for(var i=cur+1;i<list.length;i++)
-{
-  list[i].className="bespoke-inactive bespoke-after bespoke-after-"+(i-cur)+" bespoke-slide";
+list[3].className = "bespoke-active bespoke-slide";
+var cur = 3;
+for (var i = cur + 1; i < list.length; i++) {
+  list[i].className = "bespoke-inactive bespoke-after bespoke-after-" + (i - cur) + " bespoke-slide";
 }
-for(var i=0;i<cur;i++)
-{
-      list[i].className="bespoke-slide bespoke-inactive bespoke-before bespoke-before-"+(cur-i);
+for (var i = 0; i < cur; i++) {
+  list[i].className = "bespoke-slide bespoke-inactive bespoke-before bespoke-before-" + (cur - i);
 }
-function leftSec()
-{
-  if(cur<list.length-1 && inSection==true)
-  {
-    cur=cur+1;
-    for(var i=0;i<cur;i++)
-    {
-      list[i].className="bespoke-slide bespoke-inactive bespoke-before bespoke-before-"+(cur-i);
+function leftSec() {
+  if (cur < list.length - 1 && inSection == true) {
+    cur = cur + 1;
+    for (var i = 0; i < cur; i++) {
+      list[i].className = "bespoke-slide bespoke-inactive bespoke-before bespoke-before-" + (cur - i);
     }
-    for(var i=cur;i<list.length;i++)
-    {
-      list[i].className="bespoke-slide bespoke-inactive bespoke-before bespoke-after-"+(i-cur);
+    for (var i = cur; i < list.length; i++) {
+      list[i].className = "bespoke-slide bespoke-inactive bespoke-before bespoke-after-" + (i - cur);
     }
-    list[cur].className="bespoke-active bespoke-slide";
+    list[cur].className = "bespoke-active bespoke-slide";
   }
 }
 function rightSec() {
-  if(cur>0 && inSection==true)
-  {
-    cur=cur-1;
-    for(var i=0;i<cur;i++)
-    {
-      list[i].className="bespoke-slide bespoke-inactive bespoke-before bespoke-before-"+(cur-i);
+  if (cur > 0 && inSection == true) {
+    cur = cur - 1;
+    for (var i = 0; i < cur; i++) {
+      list[i].className = "bespoke-slide bespoke-inactive bespoke-before bespoke-before-" + (cur - i);
     }
-    for(var i=cur;i<list.length;i++)
-    {
-      list[i].className="bespoke-slide bespoke-inactive bespoke-before bespoke-after-"+(i-cur);
+    for (var i = cur; i < list.length; i++) {
+      list[i].className = "bespoke-slide bespoke-inactive bespoke-before bespoke-after-" + (i - cur);
     }
-    list[cur].className="bespoke-active bespoke-slide";
+    list[cur].className = "bespoke-active bespoke-slide";
   }
 }
 
 mySwipeIt
-.on('swipeLeft',function(e){
-  leftSec();
-})
-.on('swipeRight',function(e){
-  rightSec();
-})
-.on('swipeUp',function(e){
-  for(var i=0;i<list.length;i++)
-  {
-    if(i==cur)
-    {
-      console.log("swipe up event");
-      list[i].style.width="100%";
-      list[i].style.height="100%";
-      list[i].style.top="0%";
-      list[i].style.left="0%";
-      list[i].style.borderRadius="0px";
+  .on('swipeLeft', function (e) {
+    leftSec();
+  })
+  .on('swipeRight', function (e) {
+    rightSec();
+  })
+  .on('swipeUp', function (e) {
+    for (var i = 0; i < list.length; i++) {
+      if (i == cur) {
+        console.log("swipe up event");
+        list[i].style.width = "100%";
+        list[i].style.height = "100%";
+        list[i].style.top = "0%";
+        list[i].style.left = "0%";
+        list[i].style.borderRadius = "0px";
 
+      }
+      else {
+        list[i].style.display = "none";
+      }
     }
-    else{
-      list[i].style.display="none";
-    }
-  }
 
-  inSection=false;
-});
-document.addEventListener('keydown', function(e) {
+    inSection = false;
+  });
+document.addEventListener('keydown', function (e) {
   var key = e.which;
-  if(key==39 && cur<list.length&&inSection==true)
-  {
+  if (key == 39 && cur < list.length && inSection == true) {
     leftSec();
   }
-  if(key==37&&cur>0&&inSection==true)
-  {
+  if (key == 37 && cur > 0 && inSection == true) {
     rightSec();
   }
-  if(key==27)
-  {
-    for(var i=0;i<list.length;i++)
-    {
-      if(i==cur)
-      {
-        inSection=true;
-        list[i].style.width="60%";
-        list[i].style.height="80%";
-        list[i].style.top="10%";
-        list[i].style.left="20%";
-        list[i].style.borderRadius="30px";
+  if (key == 27) {
+    for (var i = 0; i < list.length; i++) {
+      if (i == cur) {
+        inSection = true;
+        list[i].style.width = "60%";
+        list[i].style.height = "80%";
+        list[i].style.top = "10%";
+        list[i].style.left = "20%";
+        list[i].style.borderRadius = "30px";
 
       }
-      list[i].style.display="block";
+      list[i].style.display = "block";
     }
   }
-  if(key==38)
-  {
-    for(var i=0;i<list.length;i++)
-    {
-      if(i==cur)
-      {
+  if (key == 38) {
+    for (var i = 0; i < list.length; i++) {
+      if (i == cur) {
         console.log("swipe up event");
-        list[i].style.width="100%";
-        list[i].style.height="100%";
-        list[i].style.top="0%";
-        list[i].style.left="0%";
-        list[i].style.borderRadius="0px";
+        list[i].style.width = "100%";
+        list[i].style.height = "100%";
+        list[i].style.top = "0%";
+        list[i].style.left = "0%";
+        list[i].style.borderRadius = "0px";
 
       }
-      else{
-        list[i].style.display="none";
+      else {
+        list[i].style.display = "none";
       }
     }
-    inSection=false;
+    inSection = false;
   }
 });
-function showEvents(str)
-{
+function showEvents(str) {
   //console.log("clicked");
-  curEve=str;
+  curEve = str;
   //console.log(document.activeElement);
   /*for(var i=1;i<gameAll.length;i++)
   {
@@ -142,38 +122,46 @@ function showEvents(str)
   /*change the parameters to desired*/
 
 }
-function back(){
-  for(var i=0;i<list.length;i++)
-    {
-      if(i==cur)
-      {
-        inSection=true;
-        list[i].style.width="60%";
-        list[i].style.height="80%";
-        list[i].style.top="10%";
-        list[i].style.left="20%";
-        list[i].style.borderRadius="30px";
+function back() {
+
+if(inSection==false){
+  console.log("inSection is false");
+  
+    for (var i = 0; i < list.length; i++) {
+      if (i == cur) {
+        inSection = true;
+        list[i].style.width = "60%";
+        list[i].style.height = "80%";
+        list[i].style.top = "10%";
+        list[i].style.left = "20%";
+        list[i].style.borderRadius = "30px";
 
       }
-      list[i].style.display="block";
+      list[i].style.display = "block";
     }
+    inSection=true;
+  }
+
+  event.stopPropagation();
 }
-function showSec(){
-  for(var i=0;i<list.length;i++)
-    {
-      if(i==cur)
-      {
-        console.log("swipe up event");
-        list[i].style.width="100%";
-        list[i].style.height="100%";
-        list[i].style.top="0%";
-        list[i].style.left="0%";
-        list[i].style.borderRadius="0px";
+function showSec() {
+if(inSection==true){
+  console.log("inSection is true");
+  
+  for (var i = 0; i < list.length; i++) {
+    if (i == cur) {
+      list[i].style.width = "100%";
+      list[i].style.height = "100%";
+      list[i].style.top = "0%";
+      list[i].style.left = "0%";
+      list[i].style.borderRadius = "0px";
 
-      }
-      else{
-        list[i].style.display="none";
-      }
     }
-    inSection=false;
+    else {
+      list[i].style.display = "none";
+    }
+  }
+  inSection = false;
+}
+
 }
