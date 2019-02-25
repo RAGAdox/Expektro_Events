@@ -130,10 +130,19 @@ if(inSection==false){
     for (var i = 0; i < list.length; i++) {
       if (i == cur) {
         inSection = true;
-        list[i].style.width = "60%";
+        if(window.innerWidth<=570)
+          {
+            list[i].style.width="80%";
+            list[i].style.left="10%";
+          }
+        else
+          {
+            list[i].style.width = "60%";
+            list[i].style.left = "20%";
+          }
         list[i].style.height = "80%";
         list[i].style.top = "10%";
-        list[i].style.left = "20%";
+        
         list[i].style.borderRadius = "30px";
 
       }
@@ -145,7 +154,7 @@ if(inSection==false){
   event.stopPropagation();
 }
 function showSec() {
-if(inSection==true){
+if(inSection==true && cur!=3){
   console.log("inSection is true");
   
   for (var i = 0; i < list.length; i++) {
