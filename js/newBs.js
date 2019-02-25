@@ -56,17 +56,6 @@ mySwipeIt
   rightSec();
 })
 .on('swipeUp',function(e){
-  if(cur==1)
-  showEvents("GAMING");
-  else if (cur==2) {
-    showEvents("PRONIGHTS")
-  }
-  else if (cur==3) {
-    showEvents("ROBOTICS");
-  }
-  else if (cur==4) {
-    showEvents("CODING");
-  }
   for(var i=0;i<list.length;i++)
   {
     if(i==cur)
@@ -115,14 +104,6 @@ document.addEventListener('keydown', function(e) {
   }
   if(key==38)
   {
-    if(cur==1)
-    showEvents("GAMING");
-    else if (cur==2) {
-      showEvents("ROBOTICS")
-    }
-    else if (cur==3) {
-      showEvents("CODING")
-    }
     for(var i=0;i<list.length;i++)
     {
       if(i==cur)
@@ -176,4 +157,23 @@ function back(){
       }
       list[i].style.display="block";
     }
+}
+function showSec(){
+  for(var i=0;i<list.length;i++)
+    {
+      if(i==cur)
+      {
+        console.log("swipe up event");
+        list[i].style.width="100%";
+        list[i].style.height="100%";
+        list[i].style.top="0%";
+        list[i].style.left="0%";
+        list[i].style.borderRadius="0px";
+
+      }
+      else{
+        list[i].style.display="none";
+      }
+    }
+    inSection=false;
 }
