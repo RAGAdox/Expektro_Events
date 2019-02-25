@@ -1,0 +1,57 @@
+/*! debug.css v0.0.3 | MIT License | https://gist.github.com/zaydek/6b2e55258734deabbd2b4a284321d6f6 */
+[debug],
+[debug] * {
+    color:                 hsla(210, 100%, 100%, 0.9) !important;
+    background:            hsla(210, 100%,  50%, 0.5) !important;
+    outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+    box-shadow: none !important;
+    filter:     none !important;
+}
+
+
+@font-face {
+    font-family: gaming;
+    src: url(../fonts/crackman.ttf);
+}
+#gaming_sec{
+  color: #FFD252;
+  font-family: gaming;
+}
+#gaming{
+    height: 100%;
+    color: #FFD252;
+    font-family: gaming;
+    overflow: scroll;
+}
+.single_event{
+    height: 100%;
+    /*
+    border: 5px orange;
+    background-color: green !important;*/
+/*font-family: gaming;*/
+}
+
+
+/*MAKING GAMMING RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+    #GAMING_Details{
+        opacity: 0;
+        color: #FFD252;
+    }
+    #GAMING_Inter{
+        position: absolute;
+        top:20%;
+        left:10%;
+        height: 70%;
+        width: :50%;
+        border: none;
+    }
+    #GAMING_Eve{
+        font-family: gaming;
+        font-size: 4vw;
+        opacity: 0;
+        text-align: left;
+        color: #FFD252;
+    }
+}

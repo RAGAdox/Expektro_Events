@@ -1,0 +1,9 @@
+@font-face {
+    font-family: brain;
+    src: url(../fonts/BrainStorm.ttf);
+  }
+  #brain_sec{
+      font-family:brain;
+    color: gray;
+    letter-spacing: 2px;
+  }

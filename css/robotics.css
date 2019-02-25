@@ -1,0 +1,30 @@
+@font-face {
+  font-family: robotics;
+  src: url(../fonts/Man.ttf);
+}
+#robotics{
+	font-family:robotics;
+  color: cyan;
+}
+#ROBOTICS_Eve{
+  position: relative;
+font-family:robotics;
+  opacity: 1;
+  text-align: left;
+  color: cyan;
+  letter-spacing: 2px;
+}
+/*#robotics h1,h2,ul, li{
+  font-family: robotics;
+  color: cyan;
+  border: 5px solid white;
+}*/
+#ROBOTICS_Details{
+
+font-family:robotics;
+		opacity: 1;
+		text-align: left;
+    overflow-y:visible;
+		color: cyan;
+    letter-spacing: 2px;
+	}

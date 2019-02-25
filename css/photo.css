@@ -1,0 +1,8 @@
+@font-face {
+    font-family: photo;
+    src: url(../fonts/Use.ttf);
+  }
+#photography_sec{
+    font-family: photo;
+    color: rgb(0, 255, 170);
+}

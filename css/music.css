@@ -1,0 +1,8 @@
+@font-face {
+    font-family: music;
+    src: url(../fonts/squealer.ttf);
+  }
+#music_sec{
+    font-family: music;
+    color: aquamarine;
+}

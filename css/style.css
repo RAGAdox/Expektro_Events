@@ -1,0 +1,281 @@
+/*font-family*/
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+}
+.getintoevent{
+	width: 100%;
+	height: 100%;
+}
+/*GAMMING EVENTS */
+
+/*PRONIGHTS events*/
+/*ROBOTICS*/
+/*CODING*/
+
+
+@keyframes blink {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+/*#TECHTIX_Sec
+{
+
+}*/
+body {
+
+	overflow: hidden;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+#logo{
+	background: #000000;
+	text-align: center;
+}
+#mainLogo{
+	width: 45%;
+}
+
+
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+
+h1 {
+
+	/*font-family: Raleway Dots;*/
+
+	/* Fix thin font rendering on Windows */
+
+	/*-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	transform: scale(0.5);*/
+  font-size: 10vw;
+	font-weight: normal;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+	text-shadow: 0 0 1px , 0 0 1px , 0 0 1px ;
+	z-index: 20;
+
+
+
+
+
+
+
+
+}
+/*.Drag{
+	-webkit-transition: opacity 2s ease;
+	-moz-transition: opacity 2s ease;
+	-ms-transition: opacity 2s ease;
+	-o-transition: opacity 2s ease;
+	transition: opacity 2s ease;
+	position: absolute;
+	left: 80%;
+	right: 0%;
+	top: 10%;
+	z-index: 30;
+	margin-top: 14px;
+	text-align: center;
+	font-family: Gill Sans, Segoe UI Light, Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 200;
+	color: white;
+	opacity: 0.9;
+}*/
+h2 {
+	-webkit-transition: opacity 2s ease;
+	-moz-transition: opacity 2s ease;
+	-ms-transition: opacity 2s ease;
+	-o-transition: opacity 2s ease;
+	transition: opacity 2s ease;
+	position: relative;
+	z-index: 30;
+	text-align: left;
+	font-weight: 200;
+	opacity: 0.9;
+}
+.single_event{
+	height: 100%;
+}
+article {
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-ms-perspective: 600px;
+	-o-perspective: 600px;
+	perspective: 600px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+section {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+	padding: 2%;
+	/*background: #000000*/
+	background: #000000;
+	border-radius: 30px;
+	width: 60%;
+	height: 80%;
+	position: fixed;
+	top: 10%;
+	left: 20%;
+	opacity: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body,
+section.bespoke-slide {
+	-webkit-transition: -webkit-transform .7s ease, opacity .7s ease, background-color .7s ease;
+	-moz-transition: -moz-transform .7s ease, opacity .7s ease, background-color .7s ease;
+	-ms-transition: -ms-transform .7s ease, opacity .7s ease, background-color .7s ease;
+	-o-transition: -o-transform .7s ease, opacity .7s ease, background-color .7s ease;
+	transition: transform .7s ease, opacity .7s ease, background-color .7s ease;
+}
+section.bespoke-active {
+	opacity: 1;
+	z-index: 1;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+	h1 {
+		text-shadow: none;
+	}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+	body,
+	section.bespoke-slide {
+		-webkit-transition: -webkit-transform .7s ease, opacity .7s ease;
+		-moz-transition: -moz-transform .7s ease, opacity .7s ease;
+		-ms-transition: -ms-transform .7s ease, opacity .7s ease;
+		-o-transition: -o-transform .7s ease, opacity .7s ease;
+		transition: transform .7s ease, opacity .7s ease;
+	}
+}
+
+
+@media only screen and (max-width: 640px) {
+
+
+
+}
+
+@media only screen and (max-width: 570px) {
+
+	section {
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+		background: #000000
+		border-radius: 30px;
+		width: 80%;
+		height: 80%;
+		position: fixed;
+		top: 10%;
+		left: 10%;
+		opacity: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+	}
+
+	article {
+		-webkit-perspective: 600px;
+		-moz-perspective: 600px;
+		-ms-perspective: 600px;
+		-o-perspective: 600px;
+		perspective: 600px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+	}
+	/*h1 {
+		-webkit-transform: scale(0.27);
+		-moz-transform: scale(0.27);
+		-ms-transform: scale(0.27);
+		-o-transform: scale(0.27);
+		transform: scale(0.27);
+
+    font-size: 40vw;
+	}*/
+	#mainLogo{
+		width: 100%;
+	}
+
+
+
+}
+
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}

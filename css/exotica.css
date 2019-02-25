@@ -1,0 +1,8 @@
+@font-face {
+  font-family: exotica;
+  src: url(../fonts/HANG.ttf);
+}
+#exotica_sec{
+  font-family: exotica;
+  color: brown;
+}

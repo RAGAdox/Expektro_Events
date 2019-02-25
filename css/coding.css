@@ -1,0 +1,47 @@
+@font-face {
+  font-family: coding;
+  src: url(../fonts/ProFont.ttf);
+}
+#coding{
+	font-family:coding;
+  color: green;
+}
+#CODING_Eve{
+  font-family: coding;
+  font-size: 2.9vw;
+  opacity: 1;
+  text-align: left;
+
+  color: #0000ff;
+}
+#CODING_Details{
+
+font-family:coding;
+		font-size: 2.4vw;
+		opacity: 1;
+		text-align: left;
+    overflow-y:visible;
+		color: #0000ff;
+	}
+  .code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing:3vmin;
+    position:absolute;
+  }
+
+  p.txt1 {
+    text-align:center;
+    font-size:12vmin;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    z-index:2;
+  }
+  p.txt2 {
+    text-align:center;
+    font-size:12vmin;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    animation:blink 1s ease-in-out infinite;
+  }
