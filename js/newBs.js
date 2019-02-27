@@ -122,11 +122,11 @@ function showEvents(str) {
   /*change the parameters to desired*/
 
 }
-function back() {
+function back(event) {
 
 if(inSection==false){
   console.log("inSection is false");
-  
+  event=event||window.event;
     for (var i = 0; i < list.length; i++) {
       if (i == cur) {
         inSection = true;
